@@ -29,4 +29,10 @@ public class RestfulController {
 		return new ResponseEntity<>(response,HttpStatus.OK);
 	}
 	
+	@GetMapping("/member/save")
+	public ResponseEntity<ResponseApi> saveMember(){
+		ResponseApi response = new ResponseApi();
+		return new ResponseEntity<>(response,HttpStatus.OK);
+	}
+	
 }
