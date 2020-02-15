@@ -30,8 +30,11 @@ public class RestfulController {
 	}
 	
 	@GetMapping("/member/save")
-	public ResponseEntity<ResponseApi> saveMember(){
+	public ResponseEntity<ResponseApi> saveMember(Member member){
+		Member newMember =  memberService.create(member);
 		ResponseApi response = new ResponseApi();
+		response.setStatus(HttpStatus.OK.toString());
+		response.setData(newMember);
 		return new ResponseEntity<>(response,HttpStatus.OK);
 	}
 	
