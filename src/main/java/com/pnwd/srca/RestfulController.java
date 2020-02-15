@@ -21,7 +21,7 @@ public class RestfulController {
 	@Autowired
 	private MemberService memberService;
 	
-	@GetMapping("/member")
+	@GetMapping("/members")
 	public ResponseEntity<ResponseApi> findAllMember(){
 		ResponseApi response = new ResponseApi();
 		response.setStatus(HttpStatus.OK.toString());
